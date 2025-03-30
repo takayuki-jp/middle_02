@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+
+/* 基本
+====================================================== */
+html {
+  font-size: 100%;
+}
+
+
+body {
+  position: relative;
+  font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Helvetica Neue', 'Arial', 'meiryo', 'Noto Serif JP', sans-serif;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, a, th, td, dl, dd, ul, li {
+  margin: 0;
+  padding: 0;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #333;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+
+/* 共通
+====================================================== */
+.content-width {
+  max-width: 1360px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+.capital {
+  text-transform: uppercase;
+}
+
+
+
+
+/* header
+====================================================== */
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+}
+.site-logo {
+  width: 180px;
+}
+.menu {
+  position: relative;
+  width: 30px;
+  height: 30px;
+}
+.menu::before,
+.menu::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #333;
+}
+.menu::before {
+  top: 10px;
+}
+.menu::after {
+  bottom: 10px;
+}
+
+nav {
+  display: none;
+}
+
+
+
+
+
+
+/* footer
+====================================================== */
+#footer {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  padding-top: 49px;
+}
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sns-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+}
+footer p {
+  font-size: 10px;
+  color: #333;
+}
+
+@media (max-width: 900px) {
+  .footer-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}
